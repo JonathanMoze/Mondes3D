@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+	<integrator type="whitted">
+		<integer name="maxRecursion" value="4"/>
+	</integrator>
+
+	<camera type="perspective">
+		<transform name="toWorld">
+			<lookat target="-0.25, -0.25, -0.15" origin="1.25, 0.5, -0.25" up="0, 1, 0"/>
+		</transform>
+		<float name="fov" value="40"/>
+		<integer name="width" value="700"/>
+		<integer name="height" value="600"/>
+	</camera>
+
+	<shape type="mesh">
+		<string name="filename" value="killeroo.obj"/>
+		<bsdf type="mirror">
+			<color name="albedo" value="0.8, 0.8, 0.8" />
+		</bsdf>
+	</shape>
+
+	<shape type="plane">
+		<point name="position" value="1.2, -0.38, 0"/>
+		<vector name="normal" value="0.0, 1.0, 0.0"/>
+		<bsdf type="diffuse">
+			<color name="kd" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+	</shape>
+
+	<shape type="plane">
+		<point name="position" value="1.2, 1, 0"/>
+		<vector name="normal" value="0.0, -1.0, 0.0"/>
+		<bsdf type="diffuse">
+			<color name="kd" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+	</shape>
+
+	<shape type="plane">
+		<point name="position" value="-1.5, 0.0, 0.8"/>
+		<vector name="normal" value="0.0, 0.0, -1.0"/>
+		<bsdf type="diffuse">
+			<color name="kd" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+	</shape>
+
+	<shape type="plane">
+		<point name="position" value="-1.6, 0.0, -0.75"/>
+		<vector name="normal" value="1.0, 0.0, 0.0"/>
+		<bsdf type="diffuse">
+			<color name="kd" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+	</shape>
+
+	<shape type="plane">
+		<point name="position" value="-1.5, 0.0, -1.0"/>
+		<vector name="normal" value="0.0, 0.0, 1.0"/>
+		<bsdf type="diffuse">
+			<color name="kd" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+	</shape>
+
+	<shape type="plane">
+		<point name="position" value="1.6, 0.0, -0.75"/>
+		<vector name="normal" value="-1.0, 0.0, 0.0"/>
+		<bsdf type="diffuse">
+			<color name="kd" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+	</shape>
+
+	<light type="pointLight">
+		<point name="position" value = "0.1, 0.8, -0.1"/>
+		<color name="radiance" value="2, 2, 2" />
+	</light>
+
+</scene>

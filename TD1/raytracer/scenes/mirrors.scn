@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+  <color name="background" value="1.0, 1.0, 1.0"/>
+
+  <!-- Use the direct illumination integrator -->
+  <integrator type="whitted">
+    <integer name="maxRecursion" value="4">
+    </integer>
+  </integrator>
+  <!-- Render the scene as viewed by a perspective camera -->
+  <camera type="perspective">
+    <float name="fov" value="45.0" />
+    <integer name="width" value="400"/>
+    <integer name="height" value="400"/>
+    <transform name="toWorld">
+      <rotate value="0, 0, 0, 1"/>
+      <translate value="0, -0, 8.0"/>
+    </transform>
+  </camera>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="-2.0, 2.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="0.0, 2.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="2.0, 2.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="-2.0, 0.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="0.0, 0.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="2.0, 0.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="-2.0, -2.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="0.0, -2.0, 0.0"/>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.9"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.1, 0.4, 0.1" />
+    </bsdf>
+    <point name="center" value="2.0, -2.0, 0.0"/>
+  </shape>
+
+  <light type="directionalLight">
+    <vector name="direction" value="-0.5, -0.5, -0.5" />
+    <color name="intensity" value="1.2, 1.2, 1.2" />
+  </light>
+
+</scene>

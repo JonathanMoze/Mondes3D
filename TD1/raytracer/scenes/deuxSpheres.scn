@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+  <color name="background" value="0.0, 0.0, 0.0"/>
+
+  <integrator type="whitted">
+    <integer name="maxRecursion" value="4"/>
+  </integrator>
+
+  <camera type="perspective">
+    <float name="fov" value="40.0" />
+    <integer name="width" value="600"/>
+    <integer name="height" value="400"/>
+    <transform name="toWorld">
+      <lookat target="2, 0, 0.5" origin="7, 0, 2" up="0, 0, 1"/>
+    </transform>
+  </camera>
+
+  <shape type="sphere">
+    <float name="radius" value="1"/>
+    <point name="center" value="0, -1.5, 0"/>
+    <bsdf type="dielectric">
+      <color name="albedo" value="1.0, 1.0, 1.0" />
+      <float name="extIOR" value="1"/>
+      <float name="intIOR" value="1.33"/>
+    </bsdf>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="1"/>
+    <point name="center" value="0, 1.5, 0"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="1.0, 1.0, 1.0" />
+    </bsdf>
+  </shape>
+
+  <shape type="plane">
+    <point name="position" value="0, 0, -1"/>
+    <bsdf type="diffuse">
+      <color name="albedo" value="0.75, 0.75, 0.75" />
+      <string name="texture" value="checkboard.exr" />
+      <integer name="mode" value="0" />
+    </bsdf>
+  </shape>
+
+  <light type="directionalLight">
+    <vector name="direction" value="-1, 0, -1" />
+    <color name="radiance" value="1.2, 1.2, 1.2" />
+  </light>
+
+
+</scene>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene>
+
+  <color name="background" value="0.9, 0.9, 0.9"/>
+
+  <integrator type="whitted">
+    <integer name="maxRecursion" value="8"/>
+  </integrator>
+
+  <camera type="perspective">
+    <float name="fov" value="45.0" />
+    <integer name="width" value="800"/>
+    <integer name="height" value="800"/>
+    <transform name="toWorld">
+      <rotate value="-0.345636, -0.170808, -0.42652, -0.818194"/>
+      <translate value="2.47398, -1.58066, 3.85207"/>
+    </transform>
+  </camera>
+
+  <shape type="sphere">
+    <float name="radius" value="0.4"/>
+    <point name="center" value="-0.4, -0.4, 0.4"/>
+    <bsdf type="phong">
+      <color name="kd" value="0.2, 0.2, 0.2" />
+      <color name="ks" value="1, 1, 1" />
+      <float name="exponent" value="200"/>
+      <string name="texture" value="rayure.exr" />
+      <integer name="mode" value="0" />
+      <vector name="scale" value="0.1 0.1 0.1" />
+    </bsdf>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.4"/>
+    <point name="center" value="0.1, 0.4, 0.4"/>
+    <bsdf type="phong">
+      <color name="kd" value="0.4, 0.4, 0.4" />
+      <color name="ks" value="1, 1, 1" />
+      <float name="exponent" value="200"/>
+      <string name="texture" value="rayure.exr" />
+      <integer name="mode" value="0" />
+      <vector name="scale" value="0.3 0.3 0.3" />
+    </bsdf>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="0.1"/>
+    <point name="center" value="0.4, -0.6, 0.1"/>
+    <bsdf type="phong">
+      <color name="kd" value="0.8, 0.5, 0.0" />
+      <color name="ks" value="0.3, 0.2, 0.1" />
+      <float name="exponent" value="4"/>
+    </bsdf>
+  </shape>
+
+  <shape type="plane">
+    <bsdf type="diffuse">
+      <color name="albedo" value="1.0, 0.9, 0.5" />
+      <string name="texture" value="checkboard.exr" />
+      <integer name="mode" value="0" />
+    </bsdf>
+  </shape>
+
+  <shape type="plane">
+    <point name="position" value="0.0, 1.0, 0.0"/>
+    <vector name="normal" value="0.0, -1.0, 0.0"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.0, 0.0, 0.9" />
+    </bsdf>
+  </shape>
+
+  <shape type="plane">
+    <point name="position" value="-1.0, 0.0, 0.0"/>
+    <vector name="normal" value="1.0, 0.0, 0.0"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="0.9, 0.0, 0.0" />
+    </bsdf>
+  </shape>
+
+  <light type="directionalLight">
+    <vector name="direction" value="-0.3, 0.5, -0.6" />
+    <color name="intensity" value="0.6, 0.6, 0.6" />
+  </light>
+
+  <light type="pointLight">
+    <point name="position" value="0.5, 0.5, 1.0" />
+    <color name="intensity" value="0.7, 0.7, 0.7" />
+  </light>
+
+</scene>
